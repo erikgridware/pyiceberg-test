@@ -1,15 +1,20 @@
 # Setup
 ## 1. Setup your Unity Catalog server (Local only)
+```sh
 brew install openjdk\@17
-# Follow zsh setup steps
+```
 
+# Follow zsh setup steps
+```sh
 git clone git@github.com:unitycatalog/unitycatalog.git
 cd unitycatalog
+cp -r etc/data/external/unity/default/tables/marksheet_uniform /tmp/
 build/sbt package
 bin/start-uc-server
+```
 
 ## 2. Run uv setup
-```
+```sh
 uv sync
 source .venv/bin/activate
 ```
